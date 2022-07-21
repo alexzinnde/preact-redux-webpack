@@ -1,10 +1,18 @@
-import { h } from 'preact';
+import { h } from 'preact'
+import { Provider } from 'react-redux'
+import store from '../app/store'
+import Counter from './counter'
 
 
 const App = () => (
-	<div id="app">
-		<h1>Hello Preact</h1>
-	</div>
+  <Provider store={store}>
+    <div>
+      <h1>Hello Preact</h1>
+    </div>
+  <div>
+    <Counter />
+  </div>
+  </Provider>
 )
 
-export default App;
+export default App
